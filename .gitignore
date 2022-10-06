@@ -1,5 +1,2 @@
-$ cat .gitignore
-# exclude build folder and it's content
-/build
-# exclude powershell script
+build/
 *.ps1
