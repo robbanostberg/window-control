@@ -7,6 +7,7 @@ from pywinauto import Desktop
 debug = False  # set to True to get printouts and deactivate the F11 presses
 wait = 0.5  # seconds
 startup = 180  # seconds
+interval = 10  # seconds
 windows2skip = 4  # amount of detected windows that aren't actual windows
 
 
@@ -23,10 +24,15 @@ def releaseKey(controller, key):
     controller.release(key)
     time.sleep(wait)
 
+def startDelay():
+    for i in range(0, startup, interval):
+        print(startup - i)
+        time.sleep(interval)
+
 
 """-------- to be executed --------"""
 if not debug:
-    time.sleep(startup)  # delayes execution of script for 3 minutes (to be evaluated)
+    startDelay()  # delayes execution of script for 3 minutes (to be evaluated)
 
 windows = Desktop(backend="uia").windows()  # creates a list of windows (and 4 other things)
 if debug:
