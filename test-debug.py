@@ -5,8 +5,9 @@ from pywinauto import Desktop
 
 """-------- static variables --------"""
 debug = True  # set to True to get printouts and deactivate the F11 presses
-wait = 0.5  # seconds
-startup = 1  # seconds 
+wait = 1  # seconds
+startup = 1  # seconds
+windows2skip = 4  # amount of detected windows that aren't actual windows 
 
 
 """-------- helper functions --------"""
@@ -35,11 +36,11 @@ if debug:
 
 k = Controller()  # creates a controller instance to send key strokes
 
-for e in range(len(windows)-4):  # does *see below* for size of windows list - 4 
+for e in range(len(windows)-windows2skip):  # does *see below* for size of windows list - 4 
     if not debug:
         tapKey(k, Key.f11)  # taps the F11 key twice with 0.5 s between, if debug is False
         tapKey(k, Key.f11)
     pressKey(k, Key.alt)  # holds the ALT key down
-    for i in range(0,e):  # presses the TAB key an increasing amount of times to iterate through each window
+    for i in range(e):  # presses the TAB key an increasing amount of times to iterate through each window
         tapKey(k, Key.tab)
     releaseKey(k, Key.alt)  # releases the ALT key
