@@ -8,7 +8,7 @@ debug = True  # set to True to get printouts and deactivate the F11 presses
 wait = 1  # seconds
 startup = 1  # seconds
 interval = 10  # seconds
-windows2skip = 4  # amount of detected windows that aren't actual windows 
+windows2skip = 2  # amount of detected windows that aren't actual windows 
 
 
 """-------- helper functions --------"""
@@ -50,3 +50,4 @@ for e in range(len(windows)-windows2skip):  # does *see below* for size of windo
     for i in range(e):  # presses the TAB key an increasing amount of times to iterate through each window
         tapKey(k, Key.tab)
     releaseKey(k, Key.alt)  # releases the ALT key
+
