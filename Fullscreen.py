@@ -6,9 +6,9 @@ from pywinauto import Desktop
 """-------- static variables --------"""
 debug = False  # set to True to get printouts and deactivate the F11 presses
 wait = 0.5  # seconds
-startup = 180  # seconds
+startup = 50  # seconds
 interval = 10  # seconds
-windows2skip = 2  # amount of detected windows that aren't actual windows
+windows2skip = 3  # amount of detected windows that aren't actual windows
 
 
 """-------- helper functions --------"""
