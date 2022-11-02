@@ -1,11 +1,14 @@
-# window-control
-- Waits for 120 s after start up, counts all windows*, uses alt-tab to step through all windows and presses F11 twice.
-*the counter also counts the taskbar and one other non-window entity, the amont of windows are thererfore reduced with 2 so it matches the actual amount of visible windows.
+# window-control - What it does
+- Waits for 120 s after start up
+- Identifies all windows with either 'TV' or 'Fast' in the name
+- Activates each window  and presses F11 four times with 2s in between
 
-## Compiling python script using pyinstaller
-- Navigate to the same directory as the python file
-- ```pyinstaller --onefile Fullscreen.py```
-- If all goes well, the script.exe file will be located in the /dist directory. 
+## Compiling python script using PS2EXE
+- Open powershell as administrator and run ```Win-PS2EXE```
+- Point the source to the 'test.ps1' file (full address, i.e. 'C:\[...]\test.ps1'
+- Point the output to any directory where you want the output, then add the name of the exe file (i.e. 'C:\[...]\fullscreen.exe')
+- Deselect the 'Compile a graphics windows program' check box
+- Press 'Compile'
 
 ## Installing Fullscreen.exe on the target computer such that it autostarts on the target computer
 - Put the *.exe file on a flashdrive
