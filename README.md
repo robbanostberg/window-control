@@ -1,5 +1,5 @@
 # window-control
-- Waits for 120 s after start up, counts all windows*, uses alt-tab to step through all windows and presses F11 twice.
+- Waits for 90 s after start up, clicks close to the top left corner and presses F11 twice for each screen.
 *the counter also counts the taskbar and one other non-window entity, the amont of windows are thererfore reduced with 2 so it matches the actual amount of visible windows.
 
 ## Compiling python script using pyinstaller
