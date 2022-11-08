@@ -9,7 +9,7 @@ marginal = 0.2
 startup = 90
 delay = 0.5
 
-print("Waiting for " + startup + " seconds")
+print("Waiting for " + str(startup) + " seconds")
 wait(startup)
 
 for m in get_monitors():
